@@ -1,10 +1,7 @@
 <?php
-error_reporting(E_ALL);
-include_once('simple_html_dom.php');
-
-// Create DOM from URL or file
-// $html = file_get_html('http://www.ceneo.pl/37384661');
+	session_start();
 ?>
+
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -20,45 +17,34 @@ include_once('simple_html_dom.php');
 	<title>ETL</title>
 </head>
 <body>
-	<div class="container text-center">
-		<div class="btn-group btn-group-lg" role="group">
-			<button type="button" class="btn btn-default btn-lg" id="E">
- 				<span aria-hidden="true"></span>E
-			</button>
-			<button type="button" class="btn btn-default btn-lg" id="T">
-               			<span aria-hidden="true"></span>T
-       			</button>
-			<button type="button" class="btn btn-default btn-lg" id="L">
-               			<span aria-hidden="true"></span>L
-       			</button>
-		</div><br><br>
-		<div>
-			<button type="button" class="btn btn-default btn-lg" id="ETL">
-               			<span aria-hidden="true"></span>ETL
-        		</button>
+
+	<div class="row">
+    	<div class="col-md-12 col-sm-12 col-xs-12">
+     		<div class="box">
+     			<div class="box-header with-border">
+	              <h3 class="box-title"><i class="fa fa-user"></i> Proces ETL</h3>
+	            </div>
+
+     			<form name="etlForm" class="form-horizontal" action="etl.php" method="post">
+					<div class="box-body">
+						<div>
+                  			<input name="productId" type="text" placeholder="Wprowadź identyfikator produktu" required pattern="{0,100}" size="50">
+                  			<span>
+	                  			<button type="submit" class="btn btn-success" name="ETL">
+					               			<span aria-hidden="true"></span>ETL
+					        	</button>
+					        </span>
+			            </div>
+				</form>
+				<div class="btn-group btn-group-lg" role="group">
+					<button type="button" class="btn btn-success" id="E">
+				 		<span aria-hidden="true"></span>E
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
 </html>
 
-<!--
-<pre value="<?php echo $html ?>"></pre>
 
-// Find all images 
-// $title = $html->find('.product-name', 0)->plaintext;
-// echo $title;
-
-// // Find all article blocks
-// foreach($html->find('ol.product-reviews') as $article) {
-//     $item['reviewer']     = $article->find('div.product-reviewer', 0)->plaintext;
-//     $item['recommended']    = $article->find('em.product-recommended', 0)->plaintext;
-//     $item['score'] = $article->find('span.review-score-count', 0)->plaintext;
-//     $item['review'] = $article->find('p.product-review-body', 0)->plaintext;
-//     $item['pros'] = $article->find('div.pros-cell', 0)->plaintext;
-//     $item['cons'] = $article->find('div.cons-cell', 0)->plaintext;
-//     $articles[] = $item;
-// }
-
-// var_dump($articles);
-
--->
