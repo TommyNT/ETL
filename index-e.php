@@ -37,12 +37,25 @@
 					       			<span aria-hidden="true"></span>E
 					        	</button>
 					        </span>
+							<span>
+	                  			<button type="submit" class="btn btn-success" name="T" formaction="index-et.php">
+					       			<span aria-hidden="true"></span>T
+					        	</button>
+					        </span>
 			            </div>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div id="pole" class="col-sm-12 col-lg-8">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>
 

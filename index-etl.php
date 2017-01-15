@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -23,6 +19,7 @@
      			<div class="box-header with-border">
 	              <h3 class="box-title"><i class="fa fa-user"></i> Proces ETL</h3>
 	            </div>
+
      			<form name="etlForm" class="form-horizontal" method="post">
 					<div class="box-body">
 						<div>
@@ -43,7 +40,14 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div id="pole" class="col-sm-12 col-lg-8">
+				<?php
+					include_once("etl.php");
+				?>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
-
-

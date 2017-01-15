@@ -37,6 +37,16 @@
 					       			<span aria-hidden="true"></span>E
 					        	</button>
 					        </span>
+							<span>
+	                  			<button type="submit" class="btn btn-success" name="T" formaction="index-et.php">
+					       			<span aria-hidden="true"></span>T
+					        	</button>
+					        </span>
+							<span>
+	                  			<button type="submit" class="btn btn-success" name="L" formaction="index-etl.php">
+					       			<span aria-hidden="true"></span>L
+					        	</button>
+					        </span>
 			            </div>
 					</div>
 				</form>
