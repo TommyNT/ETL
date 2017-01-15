@@ -1,6 +1,6 @@
 <?php
 require_once('e.php');
-
+echo "działa";
 // Transform
 // Zaciągnięcie rodzaju, marki, modelu i dodatkowych uwag urządzenia 
 $productType = trim($html->find('.breadcrumbs span', 2)->plaintext);

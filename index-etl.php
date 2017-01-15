@@ -44,7 +44,7 @@
 		<div class="row">
 			<div id="pole" class="col-sm-12 col-lg-8">
 				<?php
-					include_once("etl.php");
+					include_once("l.php");
 				?>
 			</div>
 		</div>

@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -51,11 +47,12 @@
 	<div class="container">
 		<div class="row">
 			<div id="pole" class="col-sm-12 col-lg-8">
-				<p></p>
+				<?php
+					include_once("e.php");
+				?>
 			</div>
 		</div>
 	</div>
-	
 </body>
 </html>
 

@@ -1,4 +1,5 @@
 <?php
+echo "działa";
 require_once('t.php');
 
 //Load - polaczenie i zaladowanie do bazy danych
