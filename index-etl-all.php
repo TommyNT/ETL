@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -22,23 +19,19 @@ session_start();
      			<div class="box-header with-border">
 	              <h3 class="box-title"><i class="fa fa-user"></i> Proces ETL</h3>
 	            </div>
+
      			<form name="etlForm" class="form-horizontal" method="post">
 					<div class="box-body">
 						<div>
-                  			<input name="productId" type="text" required pattern="{0,100}" size="50" placeholder="<?php echo $_SESSION['productId']; ?>" disabled>
+                  			<input name="productId" type="text" placeholder="Wprowadz identyfikator produktu" required pattern="{0,100}" size="50">
                   			<span>
-	                  			<button type="submit" class="btn btn-success" name="ETL">
+	                  			<button type="submit" class="btn btn-success" name="ETL" formaction="etl.php">
 					       			<span aria-hidden="true"></span>ETL
 					        	</button>
 					        </span>
 							<span>
-	                  			<button type="submit" class="btn btn-success" name="E">
+	                  			<button type="submit" class="btn btn-success" name="E" formaction="e.php">
 					       			<span aria-hidden="true"></span>E
-					        	</button>
-					        </span>
-							<span>
-	                  			<button type="submit" class="btn btn-success" name="T" formaction="t.php">
-					       			<span aria-hidden="true"></span>T
 					        	</button>
 					        </span>
 			            </div>
@@ -50,11 +43,11 @@ session_start();
 	<div class="container">
 		<div class="row">
 			<div id="pole" class="col-sm-12 col-lg-8">
-				<p>
-					<?php
-						echo "Pobrano dane identyfikatora: ".$_SESSION['productId']."!";
-					?>
-				</p>
+				<?php
+					session_start();
+					echo "Pobrano dane produktu o identyfikatorze: ".$_SESSION['productDane']." ";
+					echo "Jest nim ".$_SESSION['model']." oraz ".$_SESSION['reviews']." opinii, które zasiliły bazę danych!";
+				?>
 			</div>
 		</div>
 	</div>

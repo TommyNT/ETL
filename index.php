@@ -28,12 +28,12 @@
 						<div>
                   			<input name="productId" type="text" placeholder="Wprowadz identyfikator produktu" required pattern="{0,100}" size="50" value="<?php echo $_POST['productId']; ?>">
                   			<span>
-	                  			<button type="submit" class="btn btn-success" name="ETL" formaction="index-etl.php">
+	                  			<button type="submit" class="btn btn-success" name="ETL" formaction="etl.php">
 					       			<span aria-hidden="true"></span>ETL
 					        	</button>
 					        </span>
 							<span>
-	                  			<button type="submit" class="btn btn-success" name="E" formaction="index-e.php">
+	                  			<button type="submit" class="btn btn-success" name="E" formaction="e.php">
 					       			<span aria-hidden="true"></span>E
 					        	</button>
 					        </span>

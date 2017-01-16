@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -23,14 +26,14 @@
      			<form name="etlForm" class="form-horizontal" method="post">
 					<div class="box-body">
 						<div>
-                  			<input name="productId" type="text" placeholder="Wprowadz identyfikator produktu" required pattern="{0,100}" size="50" value="<?php echo $_POST['productId']; ?>">
+                  			<input name="productId" type="text" placeholder="Wprowadz identyfikator produktu" required pattern="{0,100}" size="50">
                   			<span>
-	                  			<button type="submit" class="btn btn-success" name="ETL" formaction="index-etl.php">
+	                  			<button type="submit" class="btn btn-success" name="ETL" formaction="etl.php">
 					       			<span aria-hidden="true"></span>ETL
 					        	</button>
 					        </span>
 							<span>
-	                  			<button type="submit" class="btn btn-success" name="E" formaction="index-e.php">
+	                  			<button type="submit" class="btn btn-success" name="E" formaction="e.php">
 					       			<span aria-hidden="true"></span>E
 					        	</button>
 					        </span>
@@ -44,7 +47,7 @@
 		<div class="row">
 			<div id="pole" class="col-sm-12 col-lg-8">
 				<?php
-					include_once("l.php");
+					echo "Pomyślnie zasilono bazę danych!";
 				?>
 			</div>
 		</div>

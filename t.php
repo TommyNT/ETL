@@ -1,16 +1,23 @@
 <?php
-require_once('e.php');
-echo "działa";
+session_start();
+require_once('connect.php');
+
+error_reporting(E_ALL);
+include_once('simple_html_dom.php');
+
+// Extract - pobranie obiektowego modelu dokumentu z URL
+$html = file_get_html('http://www.ceneo.pl/'.$_SESSION["productId"]);
+
 // Transform
 // Zaciągnięcie rodzaju, marki, modelu i dodatkowych uwag urządzenia 
 $productType = trim($html->find('.breadcrumbs span', 2)->plaintext);
-echo $productType;
+
 $productBrand = $html->find('li.attr-value.a.dotted-link', 3)->plaintext;
-echo $productBrand;
+
 $productModel = $html->find('.product-name', 0)->plaintext;
-echo $productModel;
+
 $productAdditional = $html->find('.ProductSublineTags', 0)->plaintext;
-echo $productAdditional;
+
 
 // Zaciągnięcie wszystkich opinii ze strony i sformatowanie
 foreach($html->find('li.product-review') as $article) {
@@ -28,4 +35,7 @@ foreach($html->find('li.product-review') as $article) {
 }
 
 // var_dump($articles);
+$_SESSION['articles'] = count($articles);
+$_SESSION['productModel'] = $productModel;
+header('Location: index-et.php')
 ?>
