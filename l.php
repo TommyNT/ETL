@@ -52,7 +52,7 @@ else{
 		$model = $result->num_rows;
 		if($model>0)
 		{
-			echo "W bazie istnieje już taki produkt! ";
+			echo "W bazie istnieje już ".$productModel."! ";
 			echo "<a href='index.php'>Kliknij</a>, aby spróbować ponownie.";
 		}else
 		{

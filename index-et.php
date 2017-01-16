@@ -57,7 +57,7 @@ session_start();
 			<div id="pole" class="col-sm-12 col-lg-8">
 				<p>
 					<?php
-						echo "Produkt ".$_SESSION['productModel']." oraz ".$_SESSION['articles']." opinii zostały przygotowane do zasilenia bazy danych!";
+						echo "Produkt ".$_SESSION['productModel']." oraz ".$_SESSION['articles']." opinii zostały pobrane i przygotowane do zasilenia bazy danych!";
 					?>
 				</p>
 			</div>

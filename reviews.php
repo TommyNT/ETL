@@ -18,8 +18,6 @@
 			<div id="pole" class="col-sm-12 col-lg-8">
 				<p>
 					<?php
-						start_session();
-						echo $_SESSION['products'];
 					?>
 
 				</p>
