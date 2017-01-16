@@ -49,13 +49,13 @@ $_SESSION['model'] = $productModel;
 
 //Łączenie z bazą danych
 $connect = @new mysqli($host, $db_user, $db_password, $db_name);
-
+$connect->query("SET CHARSET utf8");
+$connect->query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
 // Sprawdzanie połączenia i zasilenie bazy danych
 if ($connect->connect_errno!=0) {
     echo "Error: ".$connect->connect_errno;
 }
 else{
-	$connect->query("SET NAMES 'utf8'");
 	//Sprawdzenie w bazie, czy istnieje już produkt o podanym modelu
 	$s = "SELECT * FROM produkt WHERE model='$productModel'";
 
@@ -104,6 +104,6 @@ else{
 	$connect->close();
 
 }
-
+session_unset();
 header('Location: index-etl-all.php')
 ?>

@@ -15,9 +15,10 @@
 <body>
 <div class="container">
 		<div class="row">
-			<div id="pole" class="col-sm-12 col-lg-8">
+			<div id="pole" class="col-sm-12 col-lg-12" >
 				<p>
 					<?php
+						include_once('get-products-reviews.php');
 					?>
 
 				</p>

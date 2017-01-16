@@ -21,11 +21,11 @@
     	<div class="col-md-12 col-sm-12 col-xs-12">
      		<div class="box">
      			<div class="box-header with-border">
-	              <h3 class="box-title"><i class="fa fa-user"></i> Proces ETL</h3>
+	              <h3 class="box-title" style="text-align: center;"><i class="fa fa-user"></i> Proces ETL</h3>
 	            </div>
      			<form name="etlForm" class="form-horizontal" method="post">
 					<div class="box-body">
-						<div>
+						<div class="form" style="text-align: center;">
                   			<input name="productId" type="text" placeholder="Wprowadz identyfikator produktu" required pattern="{0,100}" size="50" value="<?php echo $_POST['productId']; ?>">
                   			<span>
 	                  			<button type="submit" class="btn btn-success" name="ETL" formaction="etl.php">
