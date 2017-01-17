@@ -95,5 +95,5 @@ else{
 
 }
 session_unset();
-header('Location: index-etl.php')
+header('Location: index-etl.php');
 ?>

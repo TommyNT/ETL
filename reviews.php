@@ -13,8 +13,11 @@
 	<title>ETL</title>
 </head>
 <body>
-<div class="container">
+<div class="container" style="font-family: Verdana, Arial, sans-serif; padding-top: 1%;">
 		<div class="row">
+			<div id="homePage" style="margin-left: 85%; letter-spacing: 4px;">
+				<a href="index.php"><span class="glyphicon glyphicon-home">Strona główna</span></a>
+			</div>
 			<div id="pole" class="col-sm-12 col-lg-12" >
 				<p>
 					<?php

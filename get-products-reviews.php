@@ -11,7 +11,7 @@ if ($connect->connect_errno!=0) {
 else
 {
 	
-	for($id=50;$id<1000;$id++)
+	for($id=50;$id<10000;$id++)
     {
 		$products = "SELECT model FROM produkt WHERE id='$id'";
 		$result = $connect->query($products);	
@@ -20,7 +20,7 @@ else
 	    
 	    while($row = $result->fetch_assoc()) {
 	    	echo '<div class="box-header with-border">';
-	              echo '<h3 class="box-title"><i class="fa fa-user"></i>'.$row["model"]."<br>".'</h3>';
+	              echo '<h3 class="box-title"><i class="fa fa-user"></i>'.$row["model"].'</h3>';
 	        echo '</div>';
     	}
 		} else {
@@ -35,7 +35,8 @@ else
 		if ($r->num_rows > 0) {
 	    
 	    	while($row = $r->fetch_assoc()) {
-	       		echo " Podsumowanie: " . $row["podsumowanie"]."<br>"."Wady: " . $row["wady_produktu"]. " Zalety: " . $row["zalety_produktu"]. " Liczba gwiazdek: " . $row["liczba_gwiazdek"]. " Autor: " . $row["autor_opinii"]. "<br>". "<br>";
+	    		echo "<h4>ID opinii ceneo.pl: ".$row['id_opinii_ceneo']."</h4>";
+	       		echo " <b>Podsumowanie:</b> " . $row["podsumowanie"]."<br>"."<b>Wady:</b> " . $row["wady_produktu"]."<br>". " <b>Zalety:</b> " . $row["zalety_produktu"]."<br>". " <b>Liczba gwiazdek:</b> " . $row["liczba_gwiazdek"]."<br>". " <b>Autor:</b> " . $row["autor_opinii"]. "<br>". " <b>Data wystawienia opinii:</b> " . $row["data_wystawienia_opinii"]. "<br>". "<br>";
 	    	}
 		} else {
 		  //   echo "0 results";

@@ -37,5 +37,5 @@ foreach($html->find('li.product-review') as $article) {
 // var_dump($articles);
 $_SESSION['articles'] = count($articles);
 $_SESSION['productModel'] = $productModel;
-header('Location: index-et.php')
+header('Location: index-et.php');
 ?>

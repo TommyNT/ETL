@@ -9,12 +9,6 @@ include_once('simple_html_dom.php');
 $html = file_get_html('http://www.ceneo.pl/'.$_POST["productId"]);
 $_SESSION['productDane'] = $_POST["productId"];
 
-$opinions = $html->find('div[class=pagination]');
-foreach ($opinions as $opinion) {
-	$contents = $opinion->children(0)->href;
-	echo $contents.'</br>';
-}
-
 // Transform
 // Zaciągnięcie rodzaju, marki, modelu i dodatkowych uwag urządzenia 
 $productType = trim($html->find('.breadcrumbs span', 2)->plaintext);
@@ -104,6 +98,5 @@ else{
 	$connect->close();
 
 }
-session_unset();
-header('Location: index-etl-all.php')
+header('Location: index-etl-all.php');
 ?>

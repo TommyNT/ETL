@@ -13,8 +13,11 @@
 	<title>ETL</title>
 </head>
 <body>
-	<div class="row">
+	<div class="row" style="font-family: Verdana, Arial, sans-serif;">
     	<div class="col-md-12 col-sm-12 col-xs-12">
+    		<div id="reviews" style="margin-left: 89%; padding-top: 1%;">
+				<a href="reviews.php" target="_blank"><span class="glyphicon glyphicon-star">Wyświetl opinie</span></a>
+			</div>
      		<div class="box">
      			<div class="box-header with-border">
 	              <h3 class="box-title" style="text-align: center;"><i class="fa fa-user"></i> Proces ETL</h3>
@@ -47,6 +50,7 @@
 					session_start();
 					echo "Pobrano dane produktu o identyfikatorze: ".$_SESSION['productDane']." ";
 					echo "Jest nim ".$_SESSION['model']." oraz ".$_SESSION['reviews']." opinii, które zasiliły bazę danych!";
+					session_unset();
 				?>
 			</div>
 		</div>
