@@ -15,6 +15,11 @@
 <body>
 	<div class="row" style="font-family: Verdana, Arial, sans-serif;">
     	<div class="col-md-12 col-sm-12 col-xs-12">
+    		<div id="reviews" style="text-align: center;">
+				<a href="reviews.php" target="_blank"><span class="glyphicon glyphicon-star" style="word-spacing: -10px;">Wyświetl opinie</span></a>
+				<a href="csv-export.php"><span class="glyphicon glyphicon-download" style="word-spacing: -10px;">Eksportuj do CSV</span></a>
+				<a href="remove-reviews-products.php"><span class="glyphicon glyphicon-remove" style="word-spacing: -10px;">Wyczyść bazę danych</span></a>
+			</div>
      		<div class="box">
      			<div class="box-header with-border">
 	              <h3 class="box-title" style="text-align: center;"><i class="fa fa-user"></i> Proces ETL</h3>
@@ -38,10 +43,6 @@
 					</div>
 				</form>
 			</div>
-			<div id="reviews" style="text-align: center;">
-				<a href="reviews.php" target="_blank"><span class="glyphicon glyphicon-star" style="word-spacing: -10px;">Wyświetl opinie</span></a>
-				<a href="remove-reviews-products.php"><span class="glyphicon glyphicon-remove" style="word-spacing: -10px;">Wyczyść bazę danych</span></a>
-			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -49,7 +50,7 @@
 			<div id="pole" class="col-sm-12 col-lg-12" style="text-align: center;">
 				<?php
 					session_start();
-					echo "Pobrano dane produktu o identyfikatorze: ".$_SESSION['productDane']." ";
+					echo "Pobrano dane produktu o identyfikatorze: ".$_SESSION['productDane']."! ";
 					echo "Jest nim ".$_SESSION['model']." oraz ".$_SESSION['reviews']." opinii, które zasiliły bazę danych!";
 					session_unset();
 				?>

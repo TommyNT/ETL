@@ -17,6 +17,7 @@
 		<div class="row">
 			<div id="homePage" style="margin-left: 85%;">
 				<a href="index.php"><span class="glyphicon glyphicon-home" style="word-spacing: -10px;">Strona główna</span></a>
+				<a href="csv-export.php"><span class="glyphicon glyphicon-download" style="word-spacing: -10px;">Eksportuj do CSV</span></a>
 				<a href="remove-reviews-products.php"><span class="glyphicon glyphicon-remove" style="word-spacing: -10px;">Wyczyść bazę danych</span></a>
 			</div>
 			<div id="pole" class="col-sm-12 col-lg-12" >
