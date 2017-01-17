@@ -15,14 +15,13 @@
 <body>
 <div class="container" style="font-family: Verdana, Arial, sans-serif; padding-top: 1%;">
 		<div class="row">
-			<div id="homePage" style="margin-left: 85%;">
+			<div id="homePage" style="text-align: center;">
 				<a href="index.php"><span class="glyphicon glyphicon-home" style="word-spacing: -10px;">Strona główna</span></a>
-				<a href="remove-reviews-products.php"><span class="glyphicon glyphicon-remove" style="word-spacing: -10px;">Wyczyść bazę danych</span></a>
 			</div>
 			<div id="pole" class="col-sm-12 col-lg-12" >
-				<p>
+				<p style="text-align: center;">
 					<?php
-						include_once('get-products-reviews.php');
+						include_once('delete-reviews-products.php');
 					?>
 
 				</p>
